@@ -9,13 +9,14 @@
     "semantic-ui-css": "^2.2.10"
   },
   "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "babel-preset-react-app": "^10.0.1",
     "json-server": "^0.15.1"
   },
   "scripts": {
-  "start": "export NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
-  "build": "export NODE_OPTIONS=--openssl-legacy-provider && react-scripts build"
-}
-,
+    "start": "export NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider && react-scripts build"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
