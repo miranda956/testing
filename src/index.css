@@ -1,0 +1,96 @@
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* App Container */
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Bot Collection and Bot Army Containers */
+.bot-collection, .your-bot-army {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+/* Bot Card */
+.bot-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bot-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.bot-card img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.bot-card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.bot-card p {
+  font-size: 0.9rem;
+  margin: 5px 0;
+  color: #666;
+}
+
+/* Buttons */
+.bot-card button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  margin: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bot-card button:hover {
+  background-color: #0056b3;
+}
+
+/* Army Section */
+.your-bot-army {
+  background-color: #007bff;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+}
+
+.your-bot-army h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .bot-card {
+    width: 90%;
+  }
+}
