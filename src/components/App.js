@@ -7,9 +7,13 @@ function App() {
   const [army, setArmy] = useState([]);
 
   useEffect(() => {
-    fetch('/api/fetchData')
+    fetch('./db.json')
       .then((response) => response.json())
-      .then((data) => setBots(data));
+      .then((data) => {
+        console.log("Fetched data:", data);  
+        setBots(data.bots);
+      })  
+      .catch((error) => console.error("Error fetching data:", error));  // Log any errors
   }, []);
 
   const addToArmy = (bot) => {
@@ -23,12 +27,8 @@ function App() {
   };
 
   const deleteBotFromCollection = (botId) => {
-    fetch(`/api/fetchData/${botId}`, {
-      method: "DELETE"
-    }).then(() => {
-      setBots(bots.filter((bot) => bot.id !== botId));
-      setArmy(army.filter((b) => b.id !== botId));
-    });
+    setBots(bots.filter((bot) => bot.id !== botId));
+    setArmy(army.filter((b) => b.id !== botId));
   };
 
   return (
